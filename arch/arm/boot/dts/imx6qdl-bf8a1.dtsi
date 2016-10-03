@@ -300,7 +300,16 @@
 			0x0000 /* 5:Default */
 		>;
 		amic-mono;
-       };
+	};
+
+	pn547: pn547@28 {
+		compatible = "nxp,pn547";
+		reg = <0x28>;
+		clock-frequency = <400000>;
+		interrupt-gpios = <&gpio5 20 0>;
+		enable-gpios = <&gpio5 19 0>;
+	};
+
 };
 
 &i2c2 {
@@ -437,6 +446,8 @@
 				MX6QDL_PAD_EIM_D16__GPIO3_IO16 0x80000000   /*backlight power*/
 				MX6QDL_PAD_SD3_RST__GPIO7_IO08	0x80000000  /*headphone det*/
 				MX6QDL_PAD_GPIO_2__GPIO1_IO02    0x80000000 /*SD3 CD pin*/
+				MX6QDL_PAD_CSI0_MCLK__GPIO5_IO19		0x80000000 /*NFC EN*/
+				MX6QDL_PAD_CSI0_DATA_EN__GPIO5_IO20	0x80000000 /*NFC IRQ*/
 			>;
 		};
 
