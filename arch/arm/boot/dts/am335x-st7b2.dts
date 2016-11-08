@@ -263,7 +263,7 @@
 	uart1_pins: pinmux_uart1_pins {
 		pinctrl-single,pins = <
 			0x178 (PIN_INPUT | MUX_MODE0)           /* uart1_ctsn.uart1_ctsn */
-                        0x17C (PIN_OUTPUT_PULLDOWN | MUX_MODE0) /* uart1_rtsn.uart1_rtsn */
+			0x17C (PIN_OUTPUT_PULLDOWN | MUX_MODE0) /* uart1_rtsn.uart1_rtsn */
 			0x180 (PIN_INPUT_PULLUP | MUX_MODE0)	/* uart1_rxd.uart1_rxd */
 			0x184 (PIN_OUTPUT_PULLDOWN | MUX_MODE0)		/* uart1_txd.uart1_txd */
 		>;
@@ -375,12 +375,11 @@
 	};
 
 	dcan1_pins_default: dcan1_pins_default {
-                pinctrl-single,pins = <
-                        0x168 (PIN_OUTPUT | MUX_MODE2) /* uart0_ctsn.d_can1_tx */
-                        0x16c (PIN_INPUT_PULLDOWN | MUX_MODE2) /* uart0_rtsn.d_can1_rx */
-                >;
-        };
-
+		pinctrl-single,pins = <
+			0x168 (PIN_OUTPUT | MUX_MODE2) /* uart0_ctsn.d_can1_tx */
+			0x16c (PIN_INPUT_PULLDOWN | MUX_MODE2) /* uart0_rtsn.d_can1_rx */
+		>;
+	};
 
 	nandflash_pins_s0: nandflash_pins_s0 {
 		pinctrl-single,pins = <
