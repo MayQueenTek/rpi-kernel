@@ -403,6 +403,13 @@
 		#interrupt-cells = <2>;
 		reg = <0x20>;
 	};
+
+	at24@50 {
+		compatible = "at24,24c02";
+		pagesize = <8>;
+		reg = <0x50>;
+	};
+
 };
 
 #include "tps65910.dtsi"
